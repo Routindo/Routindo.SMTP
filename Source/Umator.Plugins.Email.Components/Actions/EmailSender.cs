@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using NLog;
 using Umator.Contract;
+using Umator.Contract.Services;
 
 namespace Umator.Plugins.Email.Components.Actions
 {
@@ -15,9 +15,9 @@ namespace Umator.Plugins.Email.Components.Actions
     public class EmailSender : IAction
     {
         public const string ComponentUniqueId = "1984D188-3A59-4711-B601-4C98061FECD2";
-        private readonly ILogger _logger = LogManager.GetCurrentClassLogger();
 
         public string Id { get; set; }
+        public ILoggingService LoggingService { get; set; }
 
         [Argument(EmailSenderInstanceArgs.SmtpHost, true)] public string SmtpHost { get; set; }
 
@@ -61,21 +61,21 @@ namespace Umator.Plugins.Email.Components.Actions
                 List<string> attachments = new List<string>();
                 if (arguments.HasArgument(EmailSenderExecutionArgs.AttachedFile))
                 {
-                    _logger.Debug($"Arguments contains argument ({nameof(EmailSenderExecutionArgs.AttachedFile)})");
+                    LoggingService.Debug($"Arguments contains argument ({nameof(EmailSenderExecutionArgs.AttachedFile)})");
                     var attachmentsArgValue = arguments[EmailSenderExecutionArgs.AttachedFile];
                     if (attachmentsArgValue is string)
                     {
-                        _logger.Debug($"Argument ({nameof(EmailSenderExecutionArgs.AttachedFile)}) is a string");
+                        LoggingService.Debug($"Argument ({nameof(EmailSenderExecutionArgs.AttachedFile)}) is a string");
                         this.AttachedFile = attachmentsArgValue.ToString();
                     }
                     else if (attachmentsArgValue is IEnumerable<string> value)
                     {
-                        _logger.Debug($"Argument ({nameof(EmailSenderExecutionArgs.AttachedFile)}) is a IEnumerable<string>");
+                        LoggingService.Debug($"Argument ({nameof(EmailSenderExecutionArgs.AttachedFile)}) is a IEnumerable<string>");
                         attachments.AddRange(value);
                     }
                     else
                     {
-                        _logger.Error($"({nameof(EmailSenderExecutionArgs.AttachedFile)}) is in type ({attachmentsArgValue.GetType()})");
+                        LoggingService.Error($"({nameof(EmailSenderExecutionArgs.AttachedFile)}) is in type ({attachmentsArgValue.GetType()})");
                     }
                     // this.AttachedFile = arguments[EmailSenderExecutionArgs.AttachedFile].ToString();
                 }
@@ -138,7 +138,7 @@ namespace Umator.Plugins.Email.Components.Actions
             }
             catch (Exception exception)
             {
-                _logger.Error(exception);
+                LoggingService.Error(exception);
                 return ActionResult.Failed();
             }
         }

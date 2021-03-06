@@ -9,8 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		NuGet.config = NuGet.config
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ref", "Ref", "{945413EC-3172-43DE-935D-C693B36E87A2}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{F2E9F833-225E-427E-A0F4-58E2FC284CCB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Umator.Plugins.Email.Components", "Source\Umator.Plugins.Email.Components\Umator.Plugins.Email.Components.csproj", "{F0B019D9-1B89-4264-99B2-04BC4EA223AF}"

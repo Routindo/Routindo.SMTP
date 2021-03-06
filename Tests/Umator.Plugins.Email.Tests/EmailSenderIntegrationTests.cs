@@ -16,7 +16,7 @@ namespace Umator.Plugins.Email.Tests
         private string _attachmentPath;
 
         // ReSharper disable once UnusedMember.Local
-        private const string EmailAppPassword = "mfodbltzpkiuxxjl";
+        private const string EmailAppPassword = "";
 
         [TestInitialize]
         public void TestInitialize()
