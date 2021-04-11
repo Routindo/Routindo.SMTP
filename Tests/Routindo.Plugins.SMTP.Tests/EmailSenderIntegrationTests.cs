@@ -52,11 +52,11 @@ namespace Routindo.Plugins.Email.Tests
                 Port = 587,
                 EnableSsl = true,
                 Password = EmailAppPassword,
-                SenderEmail = "routindo.software@gmail.com",
-                RecipientEmail = "Younes.Cheikh@gmail.com",
+                SenderEmail = "",
+                RecipientEmail = "",
                 SenderDisplayName = "Routindo Software",
                 Subject = "Hello world!",
-                Username = "routindo.software@gmail.com",
+                Username = "",
                 Body = "This is a message sent from Integration testing",
                 AttachedFile = _attachmentPath
             };
