@@ -12,8 +12,8 @@ using Routindo.Contract.Services;
 
 namespace Routindo.Plugins.Email.Components.Actions
 {
-    [PluginItemInfo(ComponentUniqueId, "Email Sender",
-         "Send and email with custom subject / body and attachment file"),
+    [PluginItemInfo(ComponentUniqueId, nameof(EmailSender),
+         "Send and email through SMTP with custom subject / body and attachment file", Category = "Email", FriendlyName = "Send Email"),
      ExecutionArgumentsClass(typeof(EmailSenderExecutionArgs))]
     public class EmailSender : IAction
     {
