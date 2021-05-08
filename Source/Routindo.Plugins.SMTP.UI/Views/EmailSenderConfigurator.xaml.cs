@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace Routindo.Plugins.Email.UI.Views
+namespace Routindo.Plugins.SMTP.UI.Views
 {
     /// <summary>
     /// Interaction logic for EmailSenderConfigurator.xaml

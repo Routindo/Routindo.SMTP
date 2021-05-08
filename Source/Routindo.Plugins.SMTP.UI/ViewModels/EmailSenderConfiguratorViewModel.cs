@@ -1,12 +1,11 @@
 ﻿using System.Windows.Input;
 using Microsoft.Win32;
 using Microsoft.Xaml.Behaviors.Core;
-using Routindo.Contract;
 using Routindo.Contract.Arguments;
 using Routindo.Contract.UI;
-using Routindo.Plugins.Email.Components.Actions;
+using Routindo.Plugins.SMTP.Components.Actions;
 
-namespace Routindo.Plugins.Email.UI.ViewModels
+namespace Routindo.Plugins.SMTP.UI.ViewModels
 {
     public sealed class EmailSenderConfiguratorViewModel: PluginConfiguratorViewModelBase
     {

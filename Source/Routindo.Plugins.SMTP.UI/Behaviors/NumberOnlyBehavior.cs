@@ -8,7 +8,7 @@ using System.Windows.Input;
 
 #endregion
 
-namespace Routindo.Plugins.Email.UI.Behaviors
+namespace Routindo.Plugins.SMTP.UI.Behaviors
 {
     /// <summary>
     ///     Exposes attached behaviors that can be

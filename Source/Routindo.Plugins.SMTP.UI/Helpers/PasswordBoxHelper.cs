@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Routindo.Plugins.Email.UI.Helpers
+namespace Routindo.Plugins.SMTP.UI.Helpers
 {
     public static class PasswordBoxHelper
     {

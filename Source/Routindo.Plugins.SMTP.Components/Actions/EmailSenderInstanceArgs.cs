@@ -1,4 +1,4 @@
-﻿namespace Routindo.Plugins.Email.Components.Actions
+﻿namespace Routindo.Plugins.SMTP.Components.Actions
 {
     public static class EmailSenderInstanceArgs
     {

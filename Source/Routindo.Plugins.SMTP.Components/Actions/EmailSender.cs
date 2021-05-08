@@ -4,13 +4,12 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using Routindo.Contract;
 using Routindo.Contract.Actions;
 using Routindo.Contract.Arguments;
 using Routindo.Contract.Attributes;
 using Routindo.Contract.Services;
 
-namespace Routindo.Plugins.Email.Components.Actions
+namespace Routindo.Plugins.SMTP.Components.Actions
 {
     [PluginItemInfo(ComponentUniqueId, nameof(EmailSender),
          "Send and email through SMTP with custom subject / body and attachment file", Category = "Email", FriendlyName = "Send Email"),

@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NLog;
-using Routindo.Contract;
 using Routindo.Contract.Actions;
 using Routindo.Contract.Arguments;
-using Routindo.Plugins.Email.Components.Actions;
+using Routindo.Plugins.SMTP.Components.Actions;
 
-namespace Routindo.Plugins.Email.Tests
+namespace Routindo.Plugins.SMTP.Tests
 {
     [TestClass]
     public class EmailSenderIntegrationTests
